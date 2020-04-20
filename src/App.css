@@ -30,3 +30,17 @@ body {
   margin-top: 5%;
   color: white;
 }
+@media screen and (max-width:600px) {
+  .mainflex {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  textarea {
+    border-radius: 8px;
+  }
+  #preview {
+    margin-top: 6%;
+    border-radius: 8px;
+  }
+}
