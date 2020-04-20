@@ -6,6 +6,7 @@ class Markdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading:false,
       value:'### Hi this is your markdown editor \n and this markdown is created by Jyothipraksh \n\n ``` here you can add your code \n\n print("hello python") \n\n console.log("hello world")  \n\n ``` \n\n ##### subheading'
     };
     this.handleChange = this.handleChange.bind(this);
@@ -13,6 +14,7 @@ class Markdown extends Component {
   handleChange(event) {
     this.setState({
       value: event.target.value,
+      loading:true
      
       
     });
@@ -23,6 +25,9 @@ class Markdown extends Component {
     return { __html: values };
   }
   render() {
+    if (this.state.loading) {
+      return <h2>Loading please wait.....</h2>
+    }
     return (
       <div>
       <h2 className="main-head">Markdown Previewer</h2>
