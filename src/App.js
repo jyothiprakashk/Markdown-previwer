@@ -6,7 +6,7 @@ class Markdown extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value:'### Hi this is your markdown editor \n and this markdown is created by Jyothipraksh \n\n ``` here you can add your code \n\n print("hello python") \n\n console.log("hello world") \n\n ##### subheading```'
+      value:'### Hi this is your markdown editor \n and this markdown is created by Jyothipraksh \n\n ``` here you can add your code \n\n print("hello python") \n\n console.log("hello world")  \n\n ``` \n\n ##### subheading'
     };
     this.handleChange = this.handleChange.bind(this);
   }
